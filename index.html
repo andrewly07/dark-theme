@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="toggle-btn">
+        <i class="fas fa-adjust"></i>
+      </div>
+      <div class="container">
+        <div class="content">
+          <div class="content-image">
+            <img src="img/girl-sitting-lingerie.jpeg" alt="" />
+          </div>
+          <div class="content-text">
+            <h1 class="title">Stay At Home</h1>
+            <h2 class="subtitle">Social Distancing to Save Lives</h2>
+            <br />
+            <p class="paragraph">
+              I'm baby asymmetrical tumblr edison bulb, street art gluten-free
+              godard swag fam tattooed banh mi freegan mixtape narwhal cardigan.
+              Cliche mumblecore chartreuse, art party occupy ugh polaroid
+              thundercats vinyl disrupt. Photo booth mixtape direct trade next
+              level air plant quinoa kinfolk typewriter disrupt health goth
+              master cleanse. Meggings photo booth blog hot chicken, raw denim
+              portland fingerstache fixie narwhal.
+            </p>
+            <p class="paragraph">
+              Synth XOXO dreamcatcher, ennui truffaut leggings cray polaroid
+              mumblecore stumptown green juice sustainable viral fingerstache
+              salvia. Migas humblebrag unicorn lomo ethical wayfarers flannel
+              direct trade man braid cardigan pabst celiac gastropub. Actually
+              DIY kitsch, green juice brooklyn godard fixie meh bitters beard
+              put a bird on it af marfa vape pop-up. Venmo skateboard ugh af
+              quinoa YOLO PBR&B letterpress iPhone edison bulb bushwick everyday
+              carry fingerstache VHS. Listicle try-hard deep v franzen umami.
+            </p>
+            <a href="#" class="cta">Learn more &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      let body = document.body;
+      let toggleBtn = document.querySelector(".toggle-btn");
+      let currentTheme = localStorage.getItem("currentTheme");
+
+      if (currentTheme) {
+        body.classList.add(".dark-theme");
+      }
+      toggleBtn.addEventListener("click", function () {
+        body.classList.toggle("dark-theme");
+
+        if (body.classList.contains("dark-theme")) {
+          localStorage.setItem("currentTheme", "themeActive");
+        } else {
+          localStorage.removeItem("currentTheme");
+        }
+      });
+    </script>
+  </body>
+</html>
